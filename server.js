@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5001;
+const port = 5000;
 
 app.use((req, res, next) => {
   const responseSettings = {
@@ -37,7 +37,7 @@ app.use((req, res, next) => {
   }
 });
 
-require("./api.router")(app);
+require("./routers/api.router")(app);
 
 app.listen(port, () => {
   console.log(`Server started ${port}`);
